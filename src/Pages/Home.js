@@ -12,8 +12,8 @@ const Home = () => {
         setUSers(data.results);
       });
   }, []);
-  const handleUser = (cell) => {
-    navigate(`/user/${cell}`);
+  const handleUser = (id) => {
+    navigate(`/user/${id}`);
   };
   return (
     <div class="overflow-x-auto lg:px-20 mt-12">
@@ -32,7 +32,7 @@ const Home = () => {
           {users &&
             users?.map((user, index) => (
               <tr
-                onClick={() => handleUser(user.cell)}
+                onClick={() => handleUser(user.login.uuid)}
                 style={{ cursor: "pointer" }}
                 key={index}
               >

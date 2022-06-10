@@ -1,10 +1,12 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div class="navbar bg-base-100 shadow-2xl fixed top-0 relative z-50">
+    <div class="navbar bg-base-100 shadow-2xl top-0 relative z-50">
       <div class="flex-1">
-        <a class="btn btn-ghost normal-case text-xl">UserInfo</a>
+        <Link to="/" class="btn btn-ghost normal-case text-xl">
+          UserInfo
+        </Link>
       </div>
       <div class="flex-none">
         <div class="dropdown dropdown-end">
